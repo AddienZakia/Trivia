@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="menu">
+        <div class="select_diff" onclick="diffClicked()">
+          <p>
+            Difficulty: Random
+            <span class="material-icons"> expand_more </span>
+          </p>
+        </div>
+        <div class="show">
+          <div class="options">Easy</div>
+          <div class="options">Medium</div>
+          <div class="options">Hard</div>
+          <div class="options">Random</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="main">
+      <div class="soal">
+        <section>
+          <p id="question_number">Question 1</p>
+          <p id="diff_color">Easy</p>
+          <p id="point_number">Point: 0</p>
+        </section>
+        <div>
+          <p id="question">Sample Question</p>
+        </div>
+      </div>
+
+      <div class="jawaban">
+        <div>
+          <p>Option a</p>
+          <p>Option b</p>
+        </div>
+        <div>
+          <p>Option c</p>
+          <p>Option d</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lose">
+      <div class="show_lose">
+        <span onclick="loseGame(true)">&#10005;</span>
+        <p>Oop's your answer is incorrect</p>
+        <h3>Your Point</h3>
+        <h1>0</h1>
+      </div>
+    </section>
+
+    <section class="design">
+      <div class="shape">
+        <img src="./assets/puzzle.svg" alt="puzzle" />
+      </div>
+      <img src="./assets/games.svg" alt="games" class="gamesImg" />
+    </section>
+
+    <footer>
+      Made with <span style="color: red">&#10084;</span> by Addien Z.H
+    </footer>
+    <!-- <script src="js/list.js"></script> -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

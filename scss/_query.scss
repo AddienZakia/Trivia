@@ -1,0 +1,36 @@
+@media (max-width: 991px) {
+  .main {
+    .soal,
+    .jawaban {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    .soal section p {
+      font-size: 0.9em;
+    }
+
+    .jawaban {
+      display: block;
+
+      div p {
+        padding: 1em;
+        margin: 1em 0;
+      }
+    }
+  }
+
+  footer {
+    margin: 1em;
+  }
+}
+
+@media (max-width: 450px) {
+  .main .soal section p {
+    padding: 1em;
+    text-align: center;
+  }
+}

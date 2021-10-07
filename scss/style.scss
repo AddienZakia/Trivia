@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+$neumorphism: 12px 12px 16px 0 rgba(0, 0, 0, 0.2),
+  -5px -5px 16px 0 rgba(255, 255, 255, 0.3);
+$firstColor: #6d23b6;
+$secondColor: #581a96;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: $secondColor;
+}
+
+header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 1.5em;
+
+  .menu {
+    text-align: center;
+    position: relative;
+
+    p {
+      display: flex;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.918);
+      border-radius: 0.4em;
+      cursor: pointer;
+      padding: 0.5em 1em;
+      font-weight: 600;
+      margin-bottom: 0.5em;
+      transition: 0.2s;
+      box-shadow: $neumorphism;
+
+      &:hover {
+        background-color: white;
+      }
+
+      span {
+        margin-left: 0.3em;
+        font-size: 1.7em;
+      }
+    }
+
+    .show {
+      display: none;
+    }
+
+    .showed {
+      display: block;
+      position: absolute;
+      right: 0;
+      left: 0;
+      cursor: pointer;
+      transition: 0.2s;
+      z-index: 2;
+      box-shadow: $neumorphism;
+
+      .options {
+        background-color: white;
+        padding: 0.5em;
+        font-weight: 600;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: rgb(228, 226, 226);
+          color: rgb(75, 75, 75);
+        }
+
+        &:nth-child(1) {
+          border-radius: 0.5em 0.5em 0 0;
+        }
+
+        &:nth-child(4) {
+          border-radius: 0 0 0.5em 0.5em;
+        }
+      }
+    }
+  }
+}
+
+$width: 60%;
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 70vh;
+
+  .soal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+
+    section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      p {
+        box-shadow: $neumorphism;
+        background-color: white;
+        margin: 0.5em 0;
+        padding: 0.5em 1em;
+        font-size: 1.1em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 0.5em;
+        width: 30%;
+        transition: 0.2s;
+      }
+    }
+
+    div {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      box-shadow: $neumorphism;
+      background-color: white;
+      padding: 0.5em 1em;
+      border-radius: 0.5em;
+      margin: 0.2em 0;
+      width: 100%;
+      height: 40vh;
+
+      #question {
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .jawaban {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+
+    div {
+      width: 100%;
+
+      &:nth-child(1) {
+        margin-right: 1em;
+      }
+
+      p {
+        box-shadow: $neumorphism;
+        background-color: white;
+        margin: 0.7em 0;
+        padding: 0.8em 1em;
+        font-size: 1.1em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 0.5em;
+        width: 100%;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover {
+          background-color: rgb(228, 226, 226);
+          color: rgb(75, 75, 75);
+        }
+      }
+    }
+  }
+}
+
+.lose {
+  display: none;
+}
+
+.loseShow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+
+  .show_lose {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    width: 40%;
+    height: 30%;
+    border-radius: 1em;
+    box-shadow: $neumorphism;
+
+    span {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0.5em 1em;
+      font-size: 1.5em;
+      transition: 0.2s;
+      cursor: pointer;
+      color: black;
+
+      &:hover {
+        color: rgb(114, 110, 110);
+      }
+    }
+    p {
+      letter-spacing: 2px;
+    }
+
+    h3 {
+      font-size: 1.8em;
+      margin-top: 0.5em;
+    }
+
+    h1 {
+      color: rgb(122, 121, 121);
+    }
+  }
+}
+
+.design {
+  .shape {
+    position: absolute;
+    top: -5%;
+    height: 55%;
+    width: 100%;
+    background-color: $firstColor;
+    transform: skewY(-3deg);
+    z-index: -1;
+
+    img {
+      position: absolute;
+      bottom: -3em;
+      left: -5em;
+      transform: skewY(3deg) rotateZ(25deg);
+      width: 30%;
+    }
+  }
+
+  .gamesImg {
+    position: absolute;
+    bottom: 1.6em;
+    right: 2em;
+    width: 25%;
+    transform: rotateZ(-10deg);
+    z-index: -1;
+  }
+}
+
+footer {
+  color: white;
+  text-align: center;
+  margin-top: 7em;
+  letter-spacing: 1px;
+}
+
+@import "./query";
