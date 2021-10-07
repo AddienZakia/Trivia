@@ -1,0 +1,2 @@
+- Api Usage: [https://opentdb.com/api_config.php](https://opentdb.com/api_config.php)
+- Web Demo: [https://addienzakia.github.io/trivia](https://addienzakia.github.io/trivia)
